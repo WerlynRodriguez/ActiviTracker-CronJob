@@ -21,7 +21,6 @@ export async function GET(request: Request) {
         return new Response('Error', { status: 500 });
         
     } catch (e) {
-        const error = e as Error;
-        return new Response('Error: ' + error.message, { status: 500 });
+        return new Response('Error', { status: 500 });
     }
 }
